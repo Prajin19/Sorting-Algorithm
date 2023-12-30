@@ -5,6 +5,28 @@ To write a program to perform selection sort and insertion sort using python pro
 1.	Hardware – PCs
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
+### Selection Sort Algorithm:
+#### (i):
+Set the first unsorted element as the minimum
+#### (ii):
+For each of the unsorted elements, check if the element < current minimum.
+#### (iii):
+If yes, set the element as the new minimum.
+#### (iv):
+Swap minimum with first unsorted position.
+#### (v):
+Repeat the steps 2 and 3 for all the elements in the array.
+### Insertion Sort Algorithm:
+#### (i):
+Set the first element as sorted element j.
+#### (ii):
+For each unsorted element X, check if current sorted element j >X.
+#### (iii):
+If yes, move sorted element to the right by 1.
+#### (iv):
+Break the loop and insert X.
+#### (v):
+Repeat the steps 2 to 4 for sorting all the elements in the array.
 ## Selection Sort Algorithm:
 1.	Set the first unsorted element as the minimum
 2.	For each of the unsorted elements, check if the element < current minimum.
@@ -20,23 +42,49 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
-
-
-
-
+''' 
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: Prajin S
+RegisterNumber: 23012918
+'''
+def selection_sort(nums):
+    for i in range(len(nums)):
+        low=i
+        for j in range(i+1,len(nums)):
+            if nums[j]<nums[low]:
+                low=j
+        nums[i],nums[low]=nums[low],nums[i]
+        
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 ```
 ii)	#Insertion Sort
 ```
-
-
-
-
-
-
+''' 
+Program to sort the elements in the list using the Insertion Sort algorithm.
+Developed by: Prajin S
+RegisterNumber: 23012918 
+'''
+def insertion_sort(nums):
+    for i in range(1,len(nums)):
+        ins=nums[i]
+        j=i-1
+        while j>=0 and nums[j]>ins:
+            nums[j+1]=nums[j]
+            j-=1
+        nums[j+1]=ins
+   
+list_of_nums = eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 ```
 
 ## Output:
+### (i):
+![Screenshot 2023-12-30 134223](https://github.com/Prajin19/Sorting-Algorithm/assets/144979377/f9e24791-78ab-427f-8948-997f97790a8a)
+### (ii):
+![Screenshot 2023-12-30 134244](https://github.com/Prajin19/Sorting-Algorithm/assets/144979377/27a7fb42-6ad7-4fb0-ac3e-63be447486b9)
 
 
 ## Result:
